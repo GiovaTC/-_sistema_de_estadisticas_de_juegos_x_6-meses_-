@@ -19,7 +19,7 @@ namespace GameStatsOracle.Services
                     COUNT(*)   TOTAL_JUEGOS, 
                     AVG(SCORE) PROMEDIO_PUNTAJE,
                     MAX(SCORE) MEJOR_PUNTAJE,
-                    MIN(SCORE) PEOR_PUNTAJE,
+                    MIN(SCORE) PEOR_PUNTAJE
                 FROM GAME_RESULTS
                 WHERE GAME_DATE >= ADD_MONTHS(SYSDATE, -6)";
                                
