@@ -19,20 +19,22 @@ namespace GameStatsOracle.Services
             {
                 connection.Open();
 
-
                 string sql = @"INSERT INTO GAME_RESULTS 
-                              (GAME_DATE, PLAYER_NAME, GAME_NAME, SCORE, RESULT) 
-                                VALUES (:date, :player, :game, :score, :result)";
+                      (GAME_DATE, PLAYER_NAME, GAME_NAME, SCORE, RESULT) 
+                      VALUES (:date, :player, :game, :score, :result)";
 
-                OracleCommand cmd = new OracleCommand(sql, connection);
+                using (OracleCommand cmd = new OracleCommand(sql, connection))
+                {
+                    cmd.BindByName = true;
 
-                cmd.Parameters.Add(":date", game.GameDate);
-                cmd.Parameters.Add(":player", game.PlayerName);
-                cmd.Parameters.Add(":game", game.GameName);
-                cmd.Parameters.Add(":score", game.Score);
-                cmd.Parameters.Add(":result", game.Result);
+                    cmd.Parameters.Add("date", game.GameDate);
+                    cmd.Parameters.Add("player", game.PlayerName);
+                    cmd.Parameters.Add("game", game.GameName);
+                    cmd.Parameters.Add("score", game.Score);
+                    cmd.Parameters.Add("result", game.Result);
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
