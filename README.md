@@ -1,7 +1,9 @@
 # -_sistema_de_estadisticas_de_juegos_x_6-meses_- :.
 📊 Sistema de Estadísticas de Juegos (6 meses):
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/355ed210-0523-4528-9196-0d0bc540595d" />  
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/355ed210-0523-4528-9196-0d0bc540595d" />    
+
+<img width="2542" height="1073" alt="image" src="https://github.com/user-attachments/assets/8cc45d76-68ab-4d7d-aa2d-76ea1f22027d" />    
 
 ```
 C# (.NET) + Oracle Database 19c.
