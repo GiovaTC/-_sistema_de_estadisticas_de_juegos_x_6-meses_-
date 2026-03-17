@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Oracle.ManagedDataAccess.Client;
 
 namespace GameStatsOracle.Database
 {
-    internal class OracleConnectionManager
+    public class OracleConnectionManager
     {
+        private string connectionString =
+            "User Id=system;Password=Tapiero123;Data Source=localhost:1521/orcl";
+
+        public OracleConnection GetConnection()
+        {
+            return new OracleConnection(connectionString);
+        }
     }
-}
+}   
